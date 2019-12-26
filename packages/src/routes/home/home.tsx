@@ -1,9 +1,12 @@
-import * as React from 'react';
-import { PayInfo, PayAction, ScaleButton, Status, Tickets } from './childs';
-import { HomeContainer, MovieTitle } from './home.styled';
-import { useAppContext } from '../../context/app.context';
 import { currencyFormat, calculatePrice } from '@src/configs';
+import * as React from 'react';
+
+import { AppHelmet } from '../../components';
+import { HomeContainer, MovieTitle } from './home.styled';
+import { PayInfo, PayAction, ScaleButton, Status, Tickets } from './childs';
 import { WithErrorBound } from './home.enhance';
+import { useAppContext } from '../../context/app.context';
+
 type IHomeProps = {};
 const Home = (_: IHomeProps) => {
   const [state, actions] = useAppContext();
@@ -58,6 +61,7 @@ const Home = (_: IHomeProps) => {
   );
   return (
     <HomeContainer>
+      <AppHelmet />
       <WithErrorBound>
         <MovieTitle>
           <h2>{meta.film}</h2>
