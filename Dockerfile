@@ -3,7 +3,7 @@ WORKDIR /root/src/app
 COPY . .
 RUN yarn
 RUN echo NODE_ENV=production >>.env&&\
-    echo PORT=3002 >> .env
+    echo PORT=3001 >> .env
 
 RUN yarn build
 RUN rm -rf node_modules &&\
