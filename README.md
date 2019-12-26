@@ -1,14 +1,17 @@
 # Tiki home test
 
 ## development
-
 1. Run following command
+```
    rm -rf node_modules
    rm -f yarn.lock
    yarn cache clean
    yarn
-2. Change NODE_ENV === 'development' in file .env
-3. RUN : yarn dev
+
+```
+
+2. Change `NODE_ENV === 'development'` in file `.env`
+3. RUN : `yarn dev`
 
 ## Build
 
