@@ -32,11 +32,11 @@ const DefaultCol = styled.div<{ scale: boolean }>`
 export const ColPicked = styled(DefaultCol)`
   background: #8e8e8e;
 `;
-export const Col = styled(DefaultCol)<{ type: string; selected: boolean }>`
-  background:${({ selected }) => (selected ? COLORS.selected : '#fff')}
-  border: ${({ type, selected }) =>
-    `1px solid ${selected ? COLORS.selected : COLORS[type].default}`};
+export const Col = styled(DefaultCol)<{ type: string; isSelected: boolean }>`
+  background:${({ isSelected }) => (isSelected ? COLORS.selected : '#fff')}
+  border: ${({ type, isSelected }) =>
+    `1px solid ${isSelected ? COLORS.selected : COLORS[type].default}`};
   :hover {
-background:${(p) => (p.selected ? COLORS.selected : COLORS.hover)};
+background:${(p) => (p.isSelected ? COLORS.selected : COLORS.hover)};
   }
 `;

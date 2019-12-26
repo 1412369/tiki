@@ -5,7 +5,7 @@ type ITicketsProps = {
   scale: boolean;
   tickets: any[];
   onTicketSelect: (r: number, c: number) => void;
-  selected: boolean;
+  selected: any;
 };
 const Tickets = ({
   scale,
@@ -24,14 +24,15 @@ const Tickets = ({
               if (_item.isPicked) {
                 return <ColPicked scale={scale} />;
               }
+              const isSelected = selected.tickets[`${rowIndex}_${colIndex}`];
               return (
                 <Col
                   key={'col' + colIndex}
                   onClick={() => onTicketSelect(rowIndex, colIndex)}
                   scale={scale}
                   type={_item.type}
-                  selected={selected}>
-                  {selected ? `${seatRow} ${colIndex + 1}` : ''}
+                  isSelected={isSelected}>
+                  {isSelected ? `${seatRow} ${colIndex + 1}` : ''}
                 </Col>
               );
             })}

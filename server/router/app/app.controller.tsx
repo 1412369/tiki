@@ -14,24 +14,7 @@ import viewEngine from '../../views/engine';
 import { AppProvider } from '@src/context';
 
 const isFile = (req: Request) => {
-  if (
-    req.url.endsWith('.js') ||
-    req.url.endsWith('.css') ||
-    req.url.endsWith('.ico') ||
-    req.url.endsWith('.svg') ||
-    req.url.endsWith('.png') ||
-    req.url.endsWith('.gif') ||
-    req.url.endsWith('.jpg') ||
-    req.url.endsWith('.json') ||
-    req.url.endsWith('.map') ||
-    req.url.endsWith('.tff') ||
-    req.url.endsWith('.woff') ||
-    req.url.endsWith('.jpeg') ||
-    req.url.endsWith('.mp4') ||
-    req.url.endsWith('.mp3') ||
-    req.url.endsWith('.xml') ||
-    req.url.endsWith('.txt')
-  ) {
+  if (path.extname(req.url)) {
     return true;
   }
   return false;
