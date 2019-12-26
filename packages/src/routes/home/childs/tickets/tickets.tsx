@@ -42,4 +42,4 @@ const Tickets = ({
     </Container>
   );
 };
-export default Tickets;
+export default React.memo(Tickets);

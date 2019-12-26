@@ -6,7 +6,7 @@ type IPayInfoProps = {
     start: string;
     end: string;
   };
-  calculatePrice: number;
+  calculatePrice: string;
 };
 const PayInfo = ({ location, calculatePrice }: IPayInfoProps) => {
   return (
@@ -17,8 +17,11 @@ const PayInfo = ({ location, calculatePrice }: IPayInfoProps) => {
           {location.start} | {location.end}
         </span>
       </div>
-      <div className="movie-total">{calculatePrice}</div>
+      <div className="movie-total">
+        <span>Tổng cộng</span>
+        <span>{calculatePrice}</span>
+      </div>
     </Container>
   );
 };
-export default PayInfo;
+export default React.memo(PayInfo);

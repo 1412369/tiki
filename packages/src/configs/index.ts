@@ -11,14 +11,20 @@ export const APP_HELMET = {
 };
 export const COLORS = {
   vip: {
-    default: '#8fff8f',
+    default: '#008e00',
   },
   deluxe: {
-    default: '#f1cfcf',
+    default: '#f76f6f',
   },
   standard: {
     default: '#464646',
   },
-  selected: '#ccc',
-  hover: '#464646',
+  selected: '#ea8383',
+  hover: '#b9b9b9',
+  isPicked: '#8e8e8e',
 };
+
+export const currencyFormat = new Intl.NumberFormat('vi-VN', {
+  style: 'currency',
+  currency: 'VND',
+});

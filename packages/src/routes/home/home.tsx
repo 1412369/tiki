@@ -2,6 +2,7 @@ import * as React from 'react';
 import { PayInfo, PayAction, ScaleButton, Status, Tickets } from './childs';
 import { HomeContainer, MovieTitle } from './home.styled';
 import { useAppContext } from '../../context/app.context';
+import { currencyFormat } from '@src/configs';
 
 type IHomeProps = {};
 const Home = (_: IHomeProps) => {
@@ -64,7 +65,7 @@ const Home = (_: IHomeProps) => {
   return (
     <HomeContainer>
       <MovieTitle>
-        <h2>Mắt biếc</h2>
+        <h2>{meta.film}</h2>
       </MovieTitle>
       <Tickets
         {...{
@@ -74,13 +75,21 @@ const Home = (_: IHomeProps) => {
           selected,
         }}
       />
-      <ScaleButton scale={scale} setScale={setScale} />
+      <ScaleButton
+        scale={scale}
+        setScale={setScale}
+        selected={selected}
+        meta={meta}
+        tickets={tickets}
+      />
       <Status meta={meta} />
-      <PayInfo location={location} calculatePrice={calculatePrice} />
+      <PayInfo
+        location={location}
+        calculatePrice={currencyFormat.format(calculatePrice)}
+      />
       <PayAction
         onPaymentClick={() => {
-          const result = actions.applyTickets(Object.keys(selected.tickets));
-          console.log('results', result);
+          actions.applyTickets(Object.keys(selected.tickets));
         }}
       />
     </HomeContainer>

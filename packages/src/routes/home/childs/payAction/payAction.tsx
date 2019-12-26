@@ -12,4 +12,4 @@ const PayAction = (props: IPayActionProps) => {
     </Container>
   );
 };
-export default PayAction;
+export default React.memo(PayAction);

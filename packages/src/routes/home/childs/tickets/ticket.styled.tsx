@@ -17,20 +17,22 @@ export const Row = styled.div`
     font-size: 14px;
   }
 `;
-const DefaultCol = styled.div<{ scale: boolean }>`
+export const DefaultCol = styled.div<{ scale?: boolean; background?: string }>`
   margin: 2px;
   width: ${(p) => (p.scale ? `40px` : '20px')};
   height: ${(p) => (p.scale ? `40px` : '20px')};
   text-align: center;
+  color: #fff;
   border-radius: 50%;
   border: 1px solid #8e8e8e;
   cursor: pointer;
   font-size: ${(p) => (p.scale ? `15px` : '10px')};
   line-height: ${(p) => (p.scale ? `35px` : '20px')};
   word-spacing: -3px;
+  background: ${(p) => (p.background ? p.background : 'fff')};
 `;
 export const ColPicked = styled(DefaultCol)`
-  background: #8e8e8e;
+  background: ${COLORS.isPicked};
 `;
 export const Col = styled(DefaultCol)<{ type: string; isSelected: boolean }>`
   background:${({ isSelected }) => (isSelected ? COLORS.selected : '#fff')}

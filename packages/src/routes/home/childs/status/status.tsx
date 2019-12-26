@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { currencyFormat } from '@src/configs';
 import { COLORS } from '@src/configs';
 import { Container } from './status.styled';
 type IStatusProps = { meta: any };
@@ -10,7 +11,7 @@ const Status = ({ meta }: IStatusProps) => {
         {types.map((item: string) => {
           return (
             <li style={{ color: COLORS[item].default }}>
-              {item}: {rest[item].price}
+              {item}: {currencyFormat.format(rest[item].price)}
             </li>
           );
         })}
@@ -18,4 +19,4 @@ const Status = ({ meta }: IStatusProps) => {
     </Container>
   );
 };
-export default Status;
+export default React.memo(Status);
