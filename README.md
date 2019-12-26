@@ -1,6 +1,7 @@
 # Tiki home test
 
-At the moment i setup this project, i'm using Nodejs v.12.13.0 LTS. So it would be nice with the project is running with Nodejs v12.13.0
+At the moment when i'm setup this project, i'm using Nodejs v.12.13.0 LTS.
+So it would be nice with the project is running with Nodejs v12.13.0 LST
 ## development
 1. Run following command
 ```
