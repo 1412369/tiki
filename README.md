@@ -10,12 +10,20 @@
 
 ```
 
-2. Change `NODE_ENV === 'development'` in file `.env`
+2. Change file `.env`
+```
+NODE_ENV = development
+PORT=3001
+``` 
 3. RUN : `yarn dev`
 
 ## Build
 
-1. Change NODE_ENV === 'production' in file .env
+1. Change `.env`
+```
+NODE_ENV = production
+PORT=3001
+```
 2. Run: yarn build
    3.1 Start with node: yarn start
    3.2 Start with pm2: pm2 start pm2.json
