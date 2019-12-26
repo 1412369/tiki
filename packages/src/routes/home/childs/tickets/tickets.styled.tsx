@@ -8,13 +8,14 @@ export const Container = styled.div<{ scale: boolean }>`
   overflow: auto;
 `;
 
-export const Row = styled.div`
+export const Row = styled.div<{ scale: boolean }>`
   display: flex;
   justify-content: center;
   span {
-    padding: 5px 20px 0 0;
+    padding: ${(p) => (p.scale ? '15px' : '5px')} 20px 0 0;
+    width: 15px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: ${(p) => (p.scale ? '17px' : '14px')};
   }
 `;
 export const DefaultCol = styled.div<{ scale?: boolean; background?: string }>`

@@ -7,7 +7,14 @@ type IPayActionProps = {
 const PayAction = (props: IPayActionProps) => {
   return (
     <Container>
-      <button>Combo</button>
+      <button
+        onClick={() => {
+          alert(
+            'Chúng tôi đang phát triển tính năng này! Xin lỗi vì sự chậm trễ '
+          );
+        }}>
+        Combo
+      </button>
       <button onClick={props.onPaymentClick}>Thanh toán</button>
     </Container>
   );

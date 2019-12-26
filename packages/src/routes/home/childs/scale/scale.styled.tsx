@@ -4,6 +4,9 @@ export const Container = styled.div`
   padding: 0;
   width: 350px;
   text-align: center;
+  button {
+    margin: 0 5px;
+  }
   ul {
     display: flex;
     justify-content: space-between;

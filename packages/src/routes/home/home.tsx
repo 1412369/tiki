@@ -13,6 +13,9 @@ const Home = (_: IHomeProps) => {
   });
   const [scale, setScale] = React.useState(false);
   const { tickets, meta, location } = state;
+  const resetSelected = () => {
+    setSelected({ total: 0, tickets: {} });
+  };
   const onTicketSelect = React.useCallback(
     (i, j) => {
       if (selected.tickets[`${i}_${j}`]) {
@@ -26,7 +29,7 @@ const Home = (_: IHomeProps) => {
         });
       } else {
         if (selected.total === 6) {
-          return alert('max tickets pick');
+          return alert('Chỉ được mua tối đa 6 vé ');
         }
         setSelected({
           ...selected,
@@ -73,6 +76,7 @@ const Home = (_: IHomeProps) => {
           selected={selected}
           meta={meta}
           tickets={tickets}
+          resetSelected={resetSelected}
         />
         <Status meta={meta} />
         <PayInfo
@@ -81,6 +85,9 @@ const Home = (_: IHomeProps) => {
         />
         <PayAction
           onPaymentClick={() => {
+            if (selected.total === 0) {
+              return alert('Vui lòng chọn vé trước khi thanh toán');
+            }
             actions.applyTickets(
               Object.keys(selected.tickets).filter(
                 (item: string) => selected.tickets[item]

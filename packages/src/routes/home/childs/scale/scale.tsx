@@ -9,6 +9,7 @@ type IScaleButtonProps = {
   setScale: (v: boolean) => void;
   selected: any;
   tickets: any[];
+  resetSelected: () => void;
 };
 
 const ScaleButton = ({
@@ -17,6 +18,7 @@ const ScaleButton = ({
   scale,
   setScale,
   meta,
+  resetSelected,
 }: IScaleButtonProps) => {
   const totalPicked: number = React.useMemo(
     countTicketByStatus.bind(null, tickets, 'isPicked'),
@@ -25,6 +27,7 @@ const ScaleButton = ({
   return (
     <Container>
       <button onClick={() => setScale(!scale)}>zoom {scale ? '-' : '+'}</button>
+      <button onClick={resetSelected}>Bỏ chọn</button>
       <ul>
         <li>
           Đã chọn:

@@ -18,7 +18,7 @@ const Tickets = ({
       {tickets.map((item: any, rowIndex: number) => {
         const seatRow: string = String.fromCharCode(65 + rowIndex);
         return (
-          <Row key={'row' + rowIndex}>
+          <Row key={'row' + rowIndex} scale={scale}>
             <span>{seatRow}</span>
             {item.map((_item: any, colIndex: number) => {
               if (_item.isPicked) {
