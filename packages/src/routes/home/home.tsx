@@ -2,8 +2,8 @@ import * as React from 'react';
 import { PayInfo, PayAction, ScaleButton, Status, Tickets } from './childs';
 import { HomeContainer, MovieTitle } from './home.styled';
 import { useAppContext } from '../../context/app.context';
-import { currencyFormat } from '@src/configs';
-
+import { currencyFormat, calculatePrice } from '@src/configs';
+import { WithErrorBound } from './home.enhance';
 type IHomeProps = {};
 const Home = (_: IHomeProps) => {
   const [state, actions] = useAppContext();
@@ -40,17 +40,8 @@ const Home = (_: IHomeProps) => {
     },
     [selected, state]
   );
-  const calculatePrice = React.useMemo(
-    () => {
-      return Object.keys(selected.tickets).reduce((results, item) => {
-        const ticket = selected.tickets[item];
-        console.log(ticket, item, selected);
-        if (ticket) {
-          return results + meta[ticket.type].price;
-        }
-        return results;
-      }, 0);
-    },
+  const calculatedPrice: number = React.useMemo(
+    calculatePrice.bind(null, selected, meta),
     [selected]
   );
   React.useEffect(
@@ -64,34 +55,40 @@ const Home = (_: IHomeProps) => {
   );
   return (
     <HomeContainer>
-      <MovieTitle>
-        <h2>{meta.film}</h2>
-      </MovieTitle>
-      <Tickets
-        {...{
-          onTicketSelect,
-          scale,
-          tickets,
-          selected,
-        }}
-      />
-      <ScaleButton
-        scale={scale}
-        setScale={setScale}
-        selected={selected}
-        meta={meta}
-        tickets={tickets}
-      />
-      <Status meta={meta} />
-      <PayInfo
-        location={location}
-        calculatePrice={currencyFormat.format(calculatePrice)}
-      />
-      <PayAction
-        onPaymentClick={() => {
-          actions.applyTickets(Object.keys(selected.tickets));
-        }}
-      />
+      <WithErrorBound>
+        <MovieTitle>
+          <h2>{meta.film}</h2>
+        </MovieTitle>
+        <Tickets
+          {...{
+            onTicketSelect,
+            scale,
+            tickets,
+            selected,
+          }}
+        />
+        <ScaleButton
+          scale={scale}
+          setScale={setScale}
+          selected={selected}
+          meta={meta}
+          tickets={tickets}
+        />
+        <Status meta={meta} />
+        <PayInfo
+          location={location}
+          calculatePrice={currencyFormat.format(calculatedPrice)}
+        />
+        <PayAction
+          onPaymentClick={() => {
+            actions.applyTickets(
+              Object.keys(selected.tickets).filter(
+                (item: string) => selected.tickets[item]
+              )
+            );
+          }}
+        />
+      </WithErrorBound>
     </HomeContainer>
   );
 };

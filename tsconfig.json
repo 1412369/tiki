@@ -19,7 +19,9 @@
     "suppressImplicitAnyIndexErrors": false,
     "noUnusedLocals": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@src/*": ["packages/src/*"]
+    }
   },
   "exclude": [
     "typings",

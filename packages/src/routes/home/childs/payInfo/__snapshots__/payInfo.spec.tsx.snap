@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot PayInfo Should render PayInfo without crashing 1`] = `
+<div
+  className="sc-bdVaJa jWCWAf"
+>
+  <div
+    className="movie-time"
+  >
+    <span>
+      CGV Su Van Hanh
+    </span>
+    <span>
+      9:00
+       | 
+      10:00
+    </span>
+  </div>
+  <div
+    className="movie-total"
+  >
+    <span>
+      Tổng cộng
+    </span>
+    <span>
+      120,000 đ
+    </span>
+  </div>
+</div>
+`;

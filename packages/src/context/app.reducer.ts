@@ -1,5 +1,6 @@
 import { appEnums } from './app.types';
 export default function(state: any, action: any) {
+  console.log('action', action);
   if (action.type === appEnums.APPLY_TICKETS) {
     const tickets = [...state.tickets];
     action.payload.forEach((item: string) => {

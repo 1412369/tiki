@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot Scale Should render Scale without crashing 1`] = `
+<div
+  className="sc-bdVaJa knOAqe"
+>
+  <button
+    onClick={[Function]}
+  >
+    zoom 
+    +
+  </button>
+  <ul>
+    <li>
+      Đã chọn:
+      <div
+        className="sc-bxivhb eDmdrw"
+      >
+        10
+      </div>
+    </li>
+    <li>
+      Đang chọn:
+       
+      <div
+        className="sc-bxivhb bDiUoi"
+      />
+    </li>
+    <li>
+      Trống:
+       
+      <div
+        className="sc-bxivhb cMurYG"
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+      >
+        26
+      </div>
+    </li>
+  </ul>
+</div>
+`;

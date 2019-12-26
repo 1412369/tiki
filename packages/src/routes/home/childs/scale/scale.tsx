@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { COLORS } from '@src/configs';
+import { COLORS, countTicketByStatus } from '@src/configs';
 import { Container } from './scale.styled';
-import { DefaultCol } from '../tickets/ticket.styled';
+import { DefaultCol } from '../tickets/tickets.styled';
 
 type IScaleButtonProps = {
   meta: any;
@@ -18,18 +18,8 @@ const ScaleButton = ({
   setScale,
   meta,
 }: IScaleButtonProps) => {
-  const totalPicked = React.useMemo(
-    () => {
-      let totalPicked = 0;
-      for (let i = 0; i < tickets.length; i++) {
-        for (let j = 0; j < tickets[i].length; j++) {
-          if (tickets[i][j].isPicked) {
-            totalPicked += 1;
-          }
-        }
-      }
-      return totalPicked;
-    },
+  const totalPicked: number = React.useMemo(
+    countTicketByStatus.bind(null, tickets, 'isPicked'),
     [tickets]
   );
   return (

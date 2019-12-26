@@ -9,7 +9,7 @@
     "test": "jest",
     "build:server": "webpack --config tools/webpack/server.js",
     "build:client": "webpack --config tools/webpack/client.js",
-    "build": "npm run build:client && npm run build:server",
+    "build": "yarn test && npm run build:client && npm run build:server",
     "dev": "npm run build:server && node dist/server/server.js",
     "start": "node dist/server/server.js"
   },

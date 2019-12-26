@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot Status Should render Status without crashing 1`] = `
+<div
+  className="sc-bdVaJa iKTrfL"
+>
+  <ul>
+    <li
+      style={
+        Object {
+          "color": "#464646",
+        }
+      }
+    >
+      standard
+      : 
+      ₫ 10,000
+    </li>
+    <li
+      style={
+        Object {
+          "color": "#008e00",
+        }
+      }
+    >
+      vip
+      : 
+      ₫ 12,000
+    </li>
+    <li
+      style={
+        Object {
+          "color": "#f76f6f",
+        }
+      }
+    >
+      deluxe
+      : 
+      ₫ 15,000
+    </li>
+  </ul>
+</div>
+`;

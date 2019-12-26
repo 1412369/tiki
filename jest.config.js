@@ -16,9 +16,8 @@ module.exports = {
     },
   },
   moduleNameMapper: {
-    '^@src(.*)$': `<rootDir>/packages/src$1`,
-    '^@app-configs(.*)$': `<rootDir>/packages/src/configs$1`,
-    '^@core(.*)$': `<rootDir>/packages/core$1`,
+    '^@src(.*)$': `@packages/src$1`,
+    '^@server(.*)$': `<rootDir>/server$1`,
   },
   preset: 'ts-jest',
 };

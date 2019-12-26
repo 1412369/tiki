@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container, Col, Row, ColPicked } from './ticket.styled';
+import { Container, Col, Row, ColPicked } from './tickets.styled';
 
 type ITicketsProps = {
   scale: boolean;

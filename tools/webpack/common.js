@@ -92,9 +92,6 @@ const optimization = {
 const dynamicAlias = (path) => {
   return {
     '@root': path,
-    '@utils': '@packages/utils',
-    '@core': '@packages/core',
-    //app alias
     '@src': '@packages/src',
   };
 };

@@ -28,3 +28,23 @@ export const currencyFormat = new Intl.NumberFormat('vi-VN', {
   style: 'currency',
   currency: 'VND',
 });
+export const countTicketByStatus = (tickets: any[], status: string): number => {
+  let count = 0;
+  for (let i = 0; i < tickets.length; i++) {
+    for (let j = 0; j < tickets[i].length; j++) {
+      if (tickets[i][j][status]) {
+        count += 1;
+      }
+    }
+  }
+  return count;
+};
+export const calculatePrice = (selected: any, meta: any): any => {
+  return Object.keys(selected.tickets).reduce((results, item) => {
+    const ticket = selected.tickets[item];
+    if (ticket) {
+      return results + meta[ticket.type].price;
+    }
+    return results;
+  }, 0);
+};

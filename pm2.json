@@ -1,11 +1,11 @@
 {
   "apps": [
     {
-      "name": "shopback_3000",
+      "name": "tiki_3002",
       "script": "./dist/server/server.js",
       "instances": 1,
       "env": {
-        "PORT": 3001,
+        "PORT": 3002,
         "NODE_ENV": "production"
       }
     }
