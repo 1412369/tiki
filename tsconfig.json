@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "rootDir": "/",
+    "strictFunctionTypes": false,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": false,
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "paths": {}
+  },
+  "exclude": [
+    "typings",
+    "node_modules",
+    "webpack-env",
+    "build",
+    "scripts",
+    "webpack",
+    "jest",
+    "src/setupTests.ts",
+    "**/*.spec.tsx",
+    "**/*.spec.ts",
+    "__tests__"
+  ],
+  "include": ["./packages/**/*"],
+  "files": ["./server/vendor.d.ts"]
+}

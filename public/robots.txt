@@ -1,0 +1,6 @@
+User-agent:*
+Disallow: /account/*
+Disallow: /cashback
+Disallow: /payment
+Allow: /
+Sitemap: https://goshopback.vn/sitemap.xml

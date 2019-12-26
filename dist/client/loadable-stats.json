@@ -1,0 +1,230 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.41.2",
+  "hash": "e6c30ac130320b666eb4",
+  "publicPath": "/client/",
+  "outputPath": "/Users/tiny/Desktop/tiki/dist/client",
+  "assetsByChunkName": {
+    "browser": [
+      "browser.js",
+      "browser.15a9d770d196b1fa1726.hot-update.js",
+      "browser.js.map",
+      "browser.15a9d770d196b1fa1726.hot-update.js.map"
+    ],
+    "home-home": [
+      "home-home.js",
+      "home-home.15a9d770d196b1fa1726.hot-update.js",
+      "home-home.js.map",
+      "home-home.15a9d770d196b1fa1726.hot-update.js.map"
+    ],
+    "vendors~home-home": [
+      "vendors~home-home.js",
+      "vendors~home-home.js.map"
+    ]
+  },
+  "assets": [
+    {
+      "name": "15a9d770d196b1fa1726.hot-update.json",
+      "size": 66,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "browser.15a9d770d196b1fa1726.hot-update.js",
+      "size": 2188,
+      "chunks": [
+        "browser"
+      ],
+      "chunkNames": [
+        "browser"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "browser.15a9d770d196b1fa1726.hot-update.js.map",
+      "size": 778,
+      "chunks": [
+        "browser"
+      ],
+      "chunkNames": [
+        "browser"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "browser.js",
+      "size": 1404821,
+      "chunks": [
+        "browser"
+      ],
+      "chunkNames": [
+        "browser"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "browser.js.map",
+      "size": 1589574,
+      "chunks": [
+        "browser"
+      ],
+      "chunkNames": [
+        "browser"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "home-home.15a9d770d196b1fa1726.hot-update.js",
+      "size": 4648,
+      "chunks": [
+        "home-home"
+      ],
+      "chunkNames": [
+        "home-home"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "home-home.15a9d770d196b1fa1726.hot-update.js.map",
+      "size": 4565,
+      "chunks": [
+        "home-home"
+      ],
+      "chunkNames": [
+        "home-home"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "home-home.js",
+      "size": 38351,
+      "chunks": [
+        "home-home"
+      ],
+      "chunkNames": [
+        "home-home"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "home-home.js.map",
+      "size": 20708,
+      "chunks": [
+        "home-home"
+      ],
+      "chunkNames": [
+        "home-home"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "vendors~home-home.js",
+      "size": 126799,
+      "chunks": [
+        "vendors~home-home"
+      ],
+      "chunkNames": [
+        "vendors~home-home"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~home-home.js.map",
+      "size": 138825,
+      "chunks": [
+        "vendors~home-home"
+      ],
+      "chunkNames": [
+        "vendors~home-home"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "browser": {
+      "chunks": [
+        "browser"
+      ],
+      "assets": [
+        "browser.js",
+        "browser.15a9d770d196b1fa1726.hot-update.js",
+        "browser.js.map",
+        "browser.15a9d770d196b1fa1726.hot-update.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "browser": {
+      "chunks": [
+        "browser"
+      ],
+      "assets": [
+        "browser.js",
+        "browser.15a9d770d196b1fa1726.hot-update.js",
+        "browser.js.map",
+        "browser.15a9d770d196b1fa1726.hot-update.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "home-home": {
+      "chunks": [
+        "vendors~home-home",
+        "home-home"
+      ],
+      "assets": [
+        "vendors~home-home.js",
+        "vendors~home-home.js.map",
+        "home-home.js",
+        "home-home.15a9d770d196b1fa1726.hot-update.js",
+        "home-home.js.map",
+        "home-home.15a9d770d196b1fa1726.hot-update.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": []
+}
