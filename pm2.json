@@ -1,11 +1,11 @@
 {
   "apps": [
     {
-      "name": "tiki_3002",
+      "name": "tiki_3001",
       "script": "./dist/server/server.js",
       "instances": 1,
       "env": {
-        "PORT": 3002,
+        "PORT": 3001,
         "NODE_ENV": "production"
       }
     }
