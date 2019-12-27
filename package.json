@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "prebuild": "rm -rf dist && yarn test -u && yarn test",
+    "prebuild": "rm -rf dist && yarn test",
     "build:server": "webpack --config tools/webpack/server.js",
     "build:client": "webpack --config tools/webpack/client.js",
     "build": "yarn prebuild && npm run build:client && npm run build:server",
