@@ -1,5 +1,9 @@
 # Tiki home test
 
+## Live demo assignment here
+https://tiki.codefun.dev/
+
+# Setup
 At the moment when i'm setup this project, i'm using Nodejs v.12.13.0 LTS.
 So it would be nice with the project is running with Nodejs v12.13.0 LST
 ## development
@@ -38,6 +42,3 @@ docker build -t tiki
 - Start with pm2: `pm2 start pm2.json`
 - Start with docker: `docker run -t tiki:latest`
 
-## Live demo assignment here
-
-https://tiki.codefun.dev/
