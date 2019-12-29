@@ -8,8 +8,6 @@ const AppHelmet = (props: IAppHelmetProps) => {
     <Helmet>
       <title>{APP_HELMET.title}</title>
       <meta name="description" content={APP_HELMET.description} />{' '}
-      <meta name="keywords" content="goshopback.vn" />
-      <meta property="og:site_name" content="shopback" />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={APP_HELMET.image} />
       <meta property="og:title" content={APP_HELMET.title} />
